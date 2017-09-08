@@ -172,6 +172,10 @@ int ind = getStudentIndex(student);
 	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
+		if( student==null ||index<0 ||index>=higher)
+{
+throw IllegalArgumentException;
+}
 Student[] temp = new Student[this.students.length-index]; 
 		 int c = 0;
 		 for(int i = index; i < this.students.length; i++)
